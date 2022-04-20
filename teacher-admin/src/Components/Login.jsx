@@ -17,8 +17,8 @@ export const Login = () => {
         password: ""
     })
     const handleChange = (e) => {
-        let { id, value } = e.target
-        setCreds({ ...creds, [id]: value })
+        let { className, value } = e.target
+        setCreds({ ...creds, [className]: value })
     }
     const handleSubmit = (e) => {
         dispatch(userLogin(creds));
@@ -43,8 +43,8 @@ export const Login = () => {
                 autoComplete="off"
             >
                 <div>
-                    <TextField error id="filled-error-helper-text" label="Username" helperText="Required!." variant="filled" />
-                    <TextField error id="filled-error-helper-text" label="Password" helperText="Required!." variant="filled" />
+                    <TextField className='username' onChange={handleChange} error id="filled-error-helper-text" label="Username" helperText="Required!." variant="filled" />
+                    <TextField className='username' onChange={handleChange} error id="filled-error-helper-text" label="Password" helperText="Required!." variant="filled" />
                 </div>
             </Box>
             <Stack spacing={2} direction="row">

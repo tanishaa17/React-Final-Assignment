@@ -21,8 +21,8 @@ export const Signup = () => {
         password: ""
     })
     const handleChange = (e) => {
-        let { id, value } = e.target
-        setUser({ ...user, [id]: value })
+        let { className, value } = e.target
+        setUser({ ...user, [className]: value })
     }
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -48,10 +48,10 @@ export const Signup = () => {
                 autoComplete="off"
             >
                 <div>
-                    <TextField error id="filled-error-helper-text" label="Name" helperText="Required!" variant="filled" />
-                    <TextField error id="filled-error-helper-text" label="Email" helperText="Required!" variant="filled" />
-                    <TextField error id="filled-error-helper-text" label="Username" helperText="Required!" variant="filled" />
-                    <TextField error id="filled-error-helper-text" label="Password" helperText="Required!" variant="filled" />
+                    <TextField onChange={handleChange} className="name" error id="filled-error-helper-text" label="Name" helperText="Required!" variant="filled" />
+                    <TextField onChange={handleChange} className="email" error id="filled-error-helper-text" label="Email" helperText="Required!" variant="filled" />
+                    <TextField onChange={handleChange} className="username" error id="filled-error-helper-text" label="Username" helperText="Required!" variant="filled" />
+                    <TextField onChange={handleChange} className="password" error id="filled-error-helper-text" label="Password" helperText="Required!" variant="filled" />
                 </div>
             </Box>
             <Stack spacing={2} direction="row">
