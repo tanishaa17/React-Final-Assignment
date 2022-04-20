@@ -31,7 +31,7 @@ export const Login = () => {
         <>
             {loading && <p>loading...</p>}
             {error && <p>error</p>}
-            <h2>Login Page</h2>
+            <h2 style={{ color: "#198754" }}>Login Page</h2>
 
             <Box
                 style={{ border: "2px solid #198754", width: "40%", margin: "auto" }}
